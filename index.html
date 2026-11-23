@@ -3,474 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI輔助教學資源庫</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // 設定 Tailwind 的自訂顏色（大地色系）
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'earth-bg': '#F4EFE6',       /* 右側主背景 */
-                        'earth-sidebar': '#EBE4D5',  /* 左側側邊欄背景 */
-                        'earth-card': '#FFFFFF',     /* 卡片背景 */
-                        'earth-text': '#5C4D43',     /* 主要文字 */
-                        'earth-subtext': '#8A7B6E',  /* 次要文字 */
-                        'earth-accent': '#8C9A74',   /* 點綴色 (綠色) */
-                        'earth-hover': '#7A8864',    /* 點綴色 hover */
-                        'earth-border': '#DCD5C6'    /* 邊框顏色 */
-                    },
-                    fontFamily: {
-                        sans: ['"Inter"', 'system-ui', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <title>CHIEN BOX</title>
+    <!-- 字型：思源黑體 Noto Sans TC（中文）＋ Inter（英數字） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.invisible{visibility:hidden}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.-inset-x-2{left:-.5rem;right:-.5rem}.inset-y-1{top:.25rem;bottom:.25rem}.-top-3{top:-.75rem}.left-0{left:0}.left-1\/2{left:50%}.left-4{left:1rem}.left-5{left:1.25rem}.right-3{right:.75rem}.right-4{right:1rem}.top-0{top:0}.top-1\/2{top:50%}.top-3{top:.75rem}.-z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.mx-4{margin-left:1rem;margin-right:1rem}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-auto{margin-left:auto}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-auto{margin-top:auto}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-14{height:3.5rem}.h-16{height:4rem}.h-3\.5{height:.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-auto{height:auto}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-14{width:3.5rem}.w-16{width:4rem}.w-3\.5{width:.875rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-full{width:100%}.max-w-7xl{max-width:80rem}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.-translate-y-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%}.scale-100{--tw-scale-x:1;--tw-scale-y:1}.scale-100,.scale-95{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-95{--tw-scale-x:.95;--tw-scale-y:.95}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-x-6{-moz-column-gap:1.5rem;column-gap:1.5rem}.gap-y-9{row-gap:2.25rem}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.self-end{align-self:flex-end}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-md{border-radius:.375rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-\[\#3A6EA5\]{--tw-border-opacity:1;border-color:rgb(58 110 165/var(--tw-border-opacity,1))}.border-\[\#C9D6E3\]{--tw-border-opacity:1;border-color:rgb(201 214 227/var(--tw-border-opacity,1))}.border-red-400{--tw-border-opacity:1;border-color:rgb(248 113 113/var(--tw-border-opacity,1))}.bg-\[\#24384D\]{--tw-bg-opacity:1;background-color:rgb(36 56 77/var(--tw-bg-opacity,1))}.bg-\[\#3A6EA5\]{--tw-bg-opacity:1;background-color:rgb(58 110 165/var(--tw-bg-opacity,1))}.bg-\[\#A7C7E7\]{--tw-bg-opacity:1;background-color:rgb(167 199 231/var(--tw-bg-opacity,1))}.bg-\[\#FBFAF6\]{--tw-bg-opacity:1;background-color:rgb(251 250 246/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-opacity-40{--tw-bg-opacity:0.4}.p-1{padding:.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-1{padding-bottom:.25rem}.pb-6{padding-bottom:1.5rem}.pl-10{padding-left:2.5rem}.pl-12{padding-left:3rem}.pr-12{padding-right:3rem}.pr-4{padding-right:1rem}.pt-10{padding-top:2.5rem}.pt-2{padding-top:.5rem}.pt-3{padding-top:.75rem}.pt-4{padding-top:1rem}.pt-8{padding-top:2rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-normal{font-weight:400}.leading-snug{line-height:1.375}.tracking-wider{letter-spacing:.05em}.text-\[\#24384D\]{--tw-text-opacity:1;color:rgb(36 56 77/var(--tw-text-opacity,1))}.text-\[\#3A6EA5\]{--tw-text-opacity:1;color:rgb(58 110 165/var(--tw-text-opacity,1))}.text-\[\#5E7690\]{--tw-text-opacity:1;color:rgb(94 118 144/var(--tw-text-opacity,1))}.text-\[\#8AA0B6\]{--tw-text-opacity:1;color:rgb(138 160 182/var(--tw-text-opacity,1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.placeholder-\[\#9DB0C4\]::-moz-placeholder{--tw-placeholder-opacity:1;color:rgb(157 176 196/var(--tw-placeholder-opacity,1))}.placeholder-\[\#9DB0C4\]::placeholder{--tw-placeholder-opacity:1;color:rgb(157 176 196/var(--tw-placeholder-opacity,1))}.opacity-0{opacity:0}.shadow-\[6px_6px_0_\#C9D6E3\]{--tw-shadow:6px 6px 0 #c9d6e3;--tw-shadow-colored:6px 6px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.hover\:bg-\[\#2F5A88\]:hover{--tw-bg-opacity:1;background-color:rgb(47 90 136/var(--tw-bg-opacity,1))}.hover\:bg-\[\#EEF3F8\]:hover{--tw-bg-opacity:1;background-color:rgb(238 243 248/var(--tw-bg-opacity,1))}.focus\:border-\[\#3A6EA5\]:focus{--tw-border-opacity:1;border-color:rgb(58 110 165/var(--tw-border-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width:768px){.md\:fixed{position:fixed}.md\:ml-64{margin-left:16rem}.md\:mt-0{margin-top:0}.md\:block{display:block}.md\:flex{display:flex}.md\:hidden{display:none}.md\:h-screen{height:100vh}.md\:w-64{width:16rem}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:p-10{padding:2.5rem}}@media (min-width:1280px){.xl\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    </style>
+    <style>
+        /* ===== 方格筆記本配色 ===== */
+        :root {
+            --paper: #FDFDFB;      /* 紙張底色 */
+            --grid: #E3ECF5;       /* 方格線 */
+            --ink: #24384D;        /* 主要文字（深藍墨水） */
+            --ink-soft: #5E7690;   /* 次要文字 */
+            --line: #C9D6E3;       /* 邊框 */
+            --pen: #3A6EA5;        /* 點綴色（原子筆藍） */
+            --pen-dark: #2F5A88;
+            --margin: #F2B8B0;     /* 筆記本紅色邊線 */
+            --marker: #FFE58A;     /* 螢光筆黃 */
+        }
         body {
-            font-family: 'Inter', 'Noto Sans TC', sans-serif;
-            background-color: #F4EFE6;
-            color: #5C4D43;
+            font-family: 'Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            color: var(--ink);
+            background-color: var(--paper);
+            background-image:
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 24px 24px;
+            background-attachment: fixed;
         }
 
-        /* 卡片與按鈕的動畫效果 */
-        .project-card, .filter-btn, .role-btn {
-            transition: all 0.2s ease-in-out;
+        /* 側邊欄：像筆記本封面內頁，右側有紅色邊線 */
+        .notebook-side {
+            background: #FBFAF6;
+            border-right: 3px double var(--margin);
+        }
+
+        /* 品牌名稱：貼著紙膠帶 */
+        .brand {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+        }
+        .brand-tape {
+            background: rgba(167, 199, 231, 0.55);
+            transform: rotate(-2deg);
+        }
+
+        /* 紙膠帶標籤 */
+        .tape {
+            display: inline-flex; align-items: center; gap: 4px;
+            font-size: 12px; font-weight: 500;
+            padding: 3px 12px;
+            transform: rotate(-2deg);
+            clip-path: polygon(3% 0, 97% 0, 100% 50%, 97% 100%, 3% 100%, 0 50%);
+        }
+
+        /* 卡片：像貼在方格紙上的便條 */
+        .project-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            transition: transform .2s ease, box-shadow .2s ease;
         }
         .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 20px -5px rgba(92, 77, 67, 0.1);
-            border-color: #DCD5C6;
+            transform: translateY(-3px) rotate(-0.4deg);
+            box-shadow: 4px 4px 0 var(--line);
         }
-        
-        .project-card:hover .card-icon {
-            transform: scale(1.1);
-        }
-
-        .project-card:hover .pill-btn {
-            background-color: #8C9A74;
-            color: white;
-            border-color: #8C9A74;
+        .card-desc {
+            background-image: linear-gradient(transparent calc(100% - 1px), var(--line) 1px);
+            background-size: 100% 1.75em;
+            line-height: 1.75em;
         }
 
-        .card-icon, .pill-btn {
-            transition: all 0.3s ease;
+        /* 螢光筆標題 */
+        .marker {
+            background: linear-gradient(transparent 55%, var(--marker) 55%);
+            padding: 0 4px;
         }
 
-        /* 側邊欄按鈕的啟用狀態 */
-        .filter-btn.active {
-            background-color: #8C9A74;
-            color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .filter-btn.active .icon-emoji {
-            opacity: 1;
+        /* 「NEW」紅色印章 */
+        .stamp {
+            border: 2px solid #D9534F; color: #D9534F;
+            font-size: 11px; font-weight: 800; letter-spacing: .08em;
+            padding: 1px 6px; border-radius: 4px;
+            transform: rotate(8deg);
         }
 
-        .role-btn.active {
-            background-color: #8C9A74;
-            color: white;
-            border-color: #8C9A74;
-        }
-        
-        /* 隱藏滾動條但保留功能 */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
-</head>
-<body class="flex flex-col md:flex-row min-h-screen bg-earth-bg">
+        /* 導覽按鈕 */
+        .nav-btn { transition: background-color .15s ease; border-radius: 6px; }
+        .nav-btn:hover { background-color: #EEF3F8; }
+        .nav-btn.active { background: linear-gradient(transparent 15%, var(--marker) 15%, var(--marker) 85%, transparent 85%); font-weight: 700; }
+        .nav-btn.parent-active { font-weight: 700; }
 
-    <div class="md:hidden bg-earth-sidebar px-6 py-4 flex justify-between items-center shadow-sm z-20 relative">
-        <h1 class="text-xl font-bold text-earth-text">AI輔助教學資源庫</h1>
-        <button id="mobile-menu-btn" class="text-2xl text-earth-text p-1">
-            ☰
-        </button>
-    </div>
+        /* 區域切換按鈕 */
+        .role-btn { border: 2px solid var(--line); color: var(--ink-soft); background: #fff; border-radius: 6px; transition: all .15s ease; }
+        .role-btn:hover { border-color: var(--pen); color: var(--ink); }
+        .role-btn.active { background: var(--pen); border-color: var(--pen); color: #fff; box-shadow: 3px 3px 0 #BFD0E3; }
 
-    <aside id="sidebar" class="w-full md:w-64 bg-earth-sidebar h-auto md:h-screen flex flex-col shrink-0 md:fixed left-0 top-0 hidden md:flex z-10 border-r border-earth-border overflow-y-auto no-scrollbar">
-        <div class="p-6 hidden md:block">
-            <h1 class="text-xl font-bold text-earth-text tracking-wide">AI輔助教學資源庫</h1>
-        </div>
+        .fade-in { animation: fadeIn 0.25s ease both; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
-        <div class="px-4 mb-6 mt-4 md:mt-0">
-            <h3 class="text-xs font-bold text-[#A89F91] mb-3 px-2 uppercase tracking-wider">身份切換</h3>
-            <div class="flex flex-col gap-2">
-                <button class="role-btn active w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-sm border-2 border-earth-accent bg-earth-accent text-white shadow-sm" data-target-role="student">
-                    👦 學生專區
-                </button>
-                <button class="role-btn w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-sm border-2 border-earth-border bg-transparent text-earth-subtext hover:border-earth-accent hover:text-earth-text" data-target-role="teacher">
-                    👩‍🏫 教師專區 🔒
-                </button>
-            </div>
-        </div>
-
-        <div class="px-4 flex-1 mb-8">
-            <h3 class="text-xs font-bold text-[#A89F91] mb-3 px-2 uppercase tracking-wider">導覽選單</h3>
-            <nav class="space-y-1.5" id="filter-container">
-                <button class="filter-btn active w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left text-earth-text font-medium hover:bg-[#DFD8C8]" data-filter="all" data-title="📁 全部工具">
-                    <span class="icon-emoji">📁</span> 全部工具
-                </button>
-                <button class="filter-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left text-earth-text font-medium hover:bg-[#DFD8C8]" data-filter="language" data-title="📚 語文資源">
-                    <span class="icon-emoji opacity-70">📚</span> 語文
-                </button>
-                <button class="filter-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left text-earth-text font-medium hover:bg-[#DFD8C8]" data-filter="math" data-title="🧮 數學資源">
-                    <span class="icon-emoji opacity-70">🧮</span> 數學
-                </button>
-                <button class="filter-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left text-earth-text font-medium hover:bg-[#DFD8C8]" data-filter="other" data-title="🧩 其他工具">
-                    <span class="icon-emoji opacity-70">🧩</span> 其他
-                </button>
-            </nav>
-        </div>
-
-        <div class="p-6 text-sm text-earth-subtext border-t border-earth-border">
-            <p>©CHIEN AI輔助教學資源庫</p>
-        </div>
-    </aside>
-
-    <main class="flex-1 md:ml-64 p-6 md:p-10 w-full max-w-7xl mx-auto">
-        
-        <div class="mb-6 pb-2 border-b border-earth-border flex items-center justify-between">
-            <h2 id="current-category-title" class="text-2xl font-bold text-earth-text flex items-center gap-2">
-                📁 全部工具
-            </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" id="projects-grid">
-            
-            <a href="https://gemini.google.com/share/f40be256f2bc" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="language" data-role="student">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">康軒二下期中考成語挑戰賽</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">用成語填空題檢測成語應用能力</p>
-            </a>
-
-            <a href="https://gemini.google.com/share/179b6e951a85" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="math" data-role="student">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">數學翻翻樂</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">兩位數加減、三位數加減與簡單乘法，最多四人一起挑戰。</p>
-            </a>
-
-            <a href="https://gemini.google.com/share/bc06357f11ab" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="other" data-role="student">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">視覺化計時器</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">利用圓餅圖設計，將抽象時間具體化呈現並可分段顯示</p>
-            </a>
-
-            <a href="https://gemini.google.com/share/e5e373659d5a" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="language" data-role="student">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">114-2康軒國語二下生字庫</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">抽出生字練習造詞。</p>
-            </a>
-
-            <a href="https://chiateach.my.canva.site/dag5wp-zxja" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="math" data-role="student">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">乘法情境選擇題</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">熟悉單位量x單位數=總量。</p>
-            </a>
-
-            <a href="https://uniquechien0309.github.io/114-1/" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="language" data-role="student">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">康軒小一國字複習區</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">詞語填空複習康軒小一生字應用</p>
-            </a>
-
-            <a href="https://chiateach.my.canva.site/mathrocket" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="math" data-role="student">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">速算火箭</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">加減乘除運算練習。</p>
-            </a>
-
-            <a href="https://sites.google.com/view/multiplicationolympic/full-page-embed" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="math" data-role="student">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">九九乘法競技場</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">互動式的乘法挑戰練習。</p>
-            </a>
-            
-            <!-- 新增：餵餵寵物 -->
-            <a href="https://gemini.google.com/share/85585bc9a3eb" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="language" data-role="student">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">餵餵寵物</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">康軒二下期末考成語練習</p>
-            </a>
-
-            <a href="https://gemini.google.com/share/de82b3061eaf" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="other" data-role="teacher" style="display: none;">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">Classroom Minesweeper</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">學生發表次數限制紀錄，搭配煙火放送次數功能</p>
-            </a>
-
-            <a href="https://chiateach.my.canva.site/dag4gwq8x3k" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="other" data-role="teacher" style="display: none;">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">排座位了老師</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">拉動學生姓名排座位。</p>
-            </a>
-
-             <a href="https://sites.google.com/view/targetnumber/full-page-embed" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="other" data-role="teacher" style="display: none;">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">課前倒數與數字挑戰</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">倒數一分鐘靜心與動動腦。</p>
-            </a>
-            
-            <a href="https://uniquechien0309.github.io/boooonk/" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="other" data-role="teacher" style="display: none;">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">Boooonk</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">打擊壞心情</p>
-            </a>
-
-            <a href="https://uniquechien0309.github.io/wordsearch/" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="language" data-role="teacher" style="display: none;">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">115學年度康軒國語一上至三上生字查詢與檢測系統</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">輸入生字或段落檢驗生字是否已學習過</p>
-            </a>
-            
-            <a href="https://sites.google.com/view/ks115-13rdmidterm/full-page-embed" target="_blank" class="project-card block bg-earth-card rounded-2xl p-6 border border-transparent shadow-[0_2px_10px_rgba(92,77,67,0.04)] flex flex-col h-full" data-category="language" data-role="student" style="display: none;">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="card-icon w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"></div>
-                    <h3 class="text-lg font-bold text-earth-text leading-snug">115-1康軒三上期中考成語迷航</h3>
-                </div>
-                <p class="text-earth-subtext text-sm flex-1 line-clamp-3">句子填空檢測成語的熟悉度</p>
-            </a>
-        </div>
-    </main>
-
-    <div id="password-modal" class="fixed inset-0 bg-black bg-opacity-40 hidden flex items-center justify-center z-50 backdrop-blur-sm transition-opacity opacity-0">
-        <div class="bg-earth-card p-8 rounded-2xl shadow-xl max-w-sm w-full mx-4 transform transition-transform scale-95 border border-earth-border" id="modal-content">
-            <div class="text-center">
-                <div class="text-4xl mb-4">🔐</div>
-                <h3 class="text-2xl font-bold text-earth-text mb-6">請輸入密碼</h3>
-                
-                <input type="password" id="teacher-password" class="w-full px-4 py-3 border-2 border-earth-border rounded-xl mb-2 focus:outline-none focus:border-earth-accent text-center text-lg transition bg-[#F9F7F3]" placeholder="提示buzies">
-                <p id="password-error" class="text-red-500 text-sm mb-4 h-5 invisible">密碼錯誤，請再試一次</p>
-                
-                <div class="flex gap-3 justify-center mt-2">
-                    <button id="btn-cancel-pwd" class="flex-1 px-4 py-2.5 rounded-xl border-2 border-earth-border text-earth-text hover:bg-earth-bg transition font-medium">取消</button>
-                    <button id="btn-submit-pwd" class="flex-1 px-4 py-2.5 rounded-xl bg-earth-accent border-2 border-earth-accent text-white hover:bg-earth-hover transition font-medium shadow-sm">解鎖</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // ======== 設定您的教師密碼 ========
-            const TEACHER_PASSWORD = "24350705"; 
-            // ==================================
-
-            // ======== 自動化分類圖示與顏色設定 ========
-            const categoryConfig = {
-                'language': { icon: '📚', bgColor: '#F4EFE6' }, // 語文：溫暖米色
-                'math':     { icon: '🧮', bgColor: '#EAF0E6' }, // 數學：柔和草綠
-                'nature':   { icon: '🍃', bgColor: '#E6EDF0' }, // 自然：寧靜藍灰
-                'other':    { icon: '🧩', bgColor: '#EBE6F0' }  // 其他：淡雅紫灰
-            };
-            // ==========================================
-
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const roleBtns = document.querySelectorAll('.role-btn');
-            const projectCards = document.querySelectorAll('.project-card');
-            const currentCategoryTitle = document.getElementById('current-category-title');
-            
-            // --- 網頁載入時，自動幫所有卡片上色與加上 Icon ---
-            projectCards.forEach(card => {
-                const category = card.getAttribute('data-category');
-                const iconContainer = card.querySelector('.card-icon');
-                
-                // 根據設定檔自動填入對應的圖示與顏色
-                if (iconContainer && categoryConfig[category]) {
-                    iconContainer.innerText = categoryConfig[category].icon;
-                    iconContainer.style.backgroundColor = categoryConfig[category].bgColor;
-                }
-            });
-
-            // 手機版選單
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const sidebar = document.getElementById('sidebar');
-            
-            mobileMenuBtn.addEventListener('click', () => {
-                sidebar.classList.toggle('hidden');
-            });
-
-            // Modal 元素
-            const modal = document.getElementById('password-modal');
-            const modalContent = document.getElementById('modal-content');
-            const passwordInput = document.getElementById('teacher-password');
-            const errorText = document.getElementById('password-error');
-            const btnSubmit = document.getElementById('btn-submit-pwd');
-            const btnCancel = document.getElementById('btn-cancel-pwd');
-
-            // 當前狀態
-            let currentRole = 'student'; // 'student' 或 'teacher'
-            let currentFilter = 'all';
-
-            // 核心函式：根據「身份」和「分類」重新顯示/隱藏卡片
-            function updateCardsDisplay() {
-                projectCards.forEach(card => {
-                    const cardRole = card.getAttribute('data-role');
-                    const cardCategory = card.getAttribute('data-category');
-                    
-                    const matchRole = cardRole === currentRole;
-                    const matchFilter = currentFilter === 'all' || cardCategory === currentFilter;
-
-                    if (matchRole && matchFilter) {
-                        card.style.display = 'flex'; // 因為卡片是 flex 容器
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'translateY(0)';
-                        }, 50);
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'translateY(10px)';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 200);
-                    }
-                });
-            }
-
-            // --- 處理左側分類按鈕點擊 ---
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // 更新按鈕外觀
-                    filterBtns.forEach(b => {
-                        b.classList.remove('active');
-                        b.querySelector('.icon-emoji').classList.add('opacity-70');
-                    });
-                    btn.classList.add('active');
-                    btn.querySelector('.icon-emoji').classList.remove('opacity-70');
-                    
-                    // 取得設定值並更新標題與卡片
-                    currentFilter = btn.getAttribute('data-filter');
-                    currentCategoryTitle.innerText = btn.getAttribute('data-title');
-                    updateCardsDisplay();
-                    
-                    // 在手機版點擊分類後，自動收合選單
-                    if(window.innerWidth < 768) {
-                        sidebar.classList.add('hidden');
-                    }
-                });
-            });
-
-            // --- 處理身份切換點擊 ---
-            roleBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const targetRole = btn.getAttribute('data-target-role');
-                    
-                    if (targetRole === 'teacher' && currentRole !== 'teacher') {
-                        // 點擊教師專區，顯示密碼視窗
-                        showModal();
-                    } else if (targetRole === 'student') {
-                        // 切換回學生
-                        switchRole('student');
-                        if(window.innerWidth < 768) sidebar.classList.add('hidden');
-                    }
-                });
-            });
-
-            // --- 執行切換身份的畫面變更 ---
-            function switchRole(role) {
-                currentRole = role;
-                
-                // 更新按鈕樣式
-                roleBtns.forEach(b => {
-                    b.classList.remove('active', 'bg-earth-accent', 'text-white', 'border-earth-accent');
-                    b.classList.add('bg-transparent', 'text-earth-subtext', 'border-earth-border');
-                });
-
-                const activeBtn = document.querySelector(`.role-btn[data-target-role="${role}"]`);
-                activeBtn.classList.remove('bg-transparent', 'text-earth-subtext', 'border-earth-border');
-                activeBtn.classList.add('active', 'bg-earth-accent', 'text-white', 'border-earth-accent');
-
-                if(role === 'student') {
-                    passwordInput.value = '';
-                }
-
-                updateCardsDisplay();
-            }
-
-            // --- Modal (密碼視窗) 相關操作 ---
-            function showModal() {
-                modal.classList.remove('hidden');
-                setTimeout(() => {
-                    modal.classList.remove('opacity-0');
-                    modalContent.classList.remove('scale-95');
-                    modalContent.classList.add('scale-100');
-                    passwordInput.focus();
-                }, 10);
-                errorText.classList.add('invisible');
-                passwordInput.value = '';
-            }
-
-            function hideModal() {
-                modal.classList.add('opacity-0');
-                modalContent.classList.remove('scale-100');
-                modalContent.classList.add('scale-95');
-                setTimeout(() => {
-                    modal.classList.add('hidden');
-                }, 300);
-            }
-
-            function checkPassword() {
-                if (passwordInput.value === TEACHER_PASSWORD) {
-                    hideModal();
-                    switchRole('teacher');
-                    if(window.innerWidth < 768) sidebar.classList.add('hidden');
-                } else {
-                    errorText.classList.remove('invisible');
-                    passwordInput.classList.add('border-red-400');
-                    modalContent.style.transform = 'translateX(10px)';
-                    setTimeout(() => modalContent.style.transform = 'translateX(-10px)', 50);
-                    setTimeout(() => modalContent.style.transform = 'translateX(0)', 100);
-                }
-            }
-
-            btnCancel.addEventListener('click', hideModal);
-            btnSubmit.addEventListener('click', checkPassword);
-            
-            passwordInput.addEventListener('keypress', (e) => {
-                passwordInput.classList.remove('border-red-400');
-                errorText.classList.add('invisible');
-                if (e.key === 'Enter') {
-                    checkPassword();
-                }
-            });
-
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) hideModal();
-            });
-        });
-    </script>
-</body>
-</html>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
